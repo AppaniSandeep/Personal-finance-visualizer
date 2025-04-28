@@ -20,7 +20,7 @@ export default function Dashboard({ transactions }) {
   ];
 
   useEffect(() => {
-    if (!transactions.length) return;
+    if (!transactions || !transactions.length) return;
 
     // Calculate summary
     const currentSummary = transactions.reduce(
@@ -191,5 +191,5 @@ export default function Dashboard({ transactions }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
